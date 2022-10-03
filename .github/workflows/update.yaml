@@ -1,0 +1,18 @@
+name: Update mdl-update-box
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "5/* * * * *"
+jobs:
+  mdl-watching-box:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install
+      - name: Update
+        uses: ./
+        env:
+          GIST_ID: ${{ secrets.GIST_ID }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          USER: ${{ secrets.USER }}
+          TITLE: ${{ secrets.TITLE }}

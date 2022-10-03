@@ -1,0 +1,8 @@
+name: "mdl-update-box"
+description: "Github action for update pinned gist to show your stats in MyDramaList"
+branding:
+  icon: "clipboard"
+  color: "blue"
+runs:
+  using: "node12"
+  main: "./index.js"

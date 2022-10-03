@@ -2,7 +2,7 @@ name: Update mdl-update-box
 on:
   workflow_dispatch:
   schedule:
-    - cron: "5/* * * * *"
+    - cron: "*/2 * * * *"
 jobs:
   mdl-watching-box:
     runs-on: ubuntu-latest
